@@ -1,3 +1,7 @@
+Aby uruchomić live-server i nasłuch na pliki scss, należy użyć komendy "npm i" w głównym katalogu, następnie "npm run start:sass" w jednym terminalu i "npm run start:react" w drugim.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
