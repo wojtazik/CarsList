@@ -1,0 +1,195 @@
+.list-item  {
+  color: rgb(100,100,100);
+
+  @media screen and (max-width: 1024px){
+      min-height: 30vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      border: 1px solid gray;
+  }
+
+  & > * {
+    padding: 0 15px 0 15px;
+    line-height: 2.5rem;
+    height: 3rem;
+    vertical-align: middle;
+
+    @media screen and(max-width: 1024px){
+        height: 4rem;
+    }
+  }
+  
+  & > td:first-child  {
+      padding-left: 3rem;
+
+      @media screen and (max-width: 1024px){
+        grid-row: 1 / 2;
+        grid-column: 1/-1;
+      }
+  }
+
+  &:nth-child(even)  {
+    background-color: rgb(255, 255, 255);
+  }
+  &:nth-child(odd)  {
+    background-color: rgb(255, 244, 255);
+  }
+  &--unavailability  {
+    background-color: rgba(245, 165, 165, 0.95) !important;
+  }
+
+  &__column{
+    font-size: 1rem;
+
+    @media screen and (max-width: 1024px){
+        font-size: 1.7rem;
+    }
+
+    &--buttons{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      line-height: 1rem !important;
+
+        @media screen and(max-width: 1024px){
+            flex-direction: column;
+            align-items: center;
+            & > *:first-child{
+                padding-bottom: .5rem;
+            }
+        }
+    }
+  }
+
+  &__photo  {
+    vertical-align: middle;
+    width: 3.5rem;
+    height: 2rem;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    margin-left: 2rem;
+    transition: all .3s linear;
+    
+    @media screen and (max-width: 1024px){
+        padding-top: 1rem;
+        width: 10rem;
+        height: 7rem;
+    }
+
+  &:hover  {
+    position: absolute;
+    padding: 0;
+    transform: scale(7);
+    border-radius: 0;
+    @media screen and (max-width: 1024px){
+        transform: scale(4);
+    }
+    }
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 10px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 30px;
+  }
+
+.availability-s{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.availability-s, .delete{
+  margin: 0;
+  height: 1.5rem;
+}
+
+.delete{
+  text-align: center;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.7rem;
+  background-color: rgba(84, 82, 212, 0.5);
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .3s ease-out;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+  &:hover{
+    background-color:#7758E2;
+  }
+
+  &:active,
+  &:focus{
+    outline:none;
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  }
+}
+

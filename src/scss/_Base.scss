@@ -1,0 +1,17 @@
+/*Breakpoints*/
+$xsmall: 480px;
+$small: 768px;
+$medium: 1024px;
+
+
+html{
+  box-sizing:border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body  {
+  background-image: url(../img/page-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
